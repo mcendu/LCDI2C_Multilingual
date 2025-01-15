@@ -125,4 +125,4 @@ private:
   uint8_t _backlightval;
 };
 
-#endif
+#endif // LCDI2C_h
