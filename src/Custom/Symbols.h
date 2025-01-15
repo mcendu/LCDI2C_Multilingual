@@ -18,10 +18,7 @@
 
 const uint8_t SymbolCustomLetterNum = 2;
 // List of custom Unicode characters
-CustomCharacterType SymbolCustomLetters [SymbolCustomLetterNum] = {
-  {0x00B0, {0b00000000,0b01100000,0b10010000,0b10010000,0b01100000}},	// ° (degree symbol)
-  {0x20AC, {0b00101000,0b01111100,0b10101010,0b10101010,0b10000010}}	// € (Euro sign)
-};
+extern CustomCharacterType SymbolCustomLetters [SymbolCustomLetterNum];
 
 class CustomizedSymbols : public CustomizedLanguage {
 public:
