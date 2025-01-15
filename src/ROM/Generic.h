@@ -24,7 +24,7 @@
 #include "../base/LCDI2C_Types.h"
 
 // List of some symbols built in the ROM
-const uint8_t GenericROMLetterNum = 4;
+const uint8_t GenericROMLetterNum = 16;
 extern ROMCharacterType GenericROMLetters[GenericROMLetterNum];
 
 #endif // ROM_Generic_h

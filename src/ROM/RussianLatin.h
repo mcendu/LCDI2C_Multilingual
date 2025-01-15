@@ -19,7 +19,7 @@
 
 #include "../base/LCDI2C_Types.h"
 
-const uint8_t RussianLatinROMLetterNum = 33;
+const uint8_t RussianLatinROMLetterNum = 52;
 // List of capital Russian, Latin, Greek letters and some symbols built in the
 // ROM
 extern ROMCharacterType RussianLatinROMLetters[RussianLatinROMLetterNum];

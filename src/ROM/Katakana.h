@@ -32,12 +32,12 @@ typedef struct {
 
 // Array for mapping Kana character with diacritic to base Kana character +
 // diacritic
-const uint8_t KanaDiacriticCharacterNum = 29;
+const uint8_t KanaDiacriticCharacterNum = 31;
 extern KanaDiacriticCharacterType
     KanaDiacriticCharacters[KanaDiacriticCharacterNum];
 
 // List of Katakana characters, punctuations, some symbols built in the ROM
-const uint8_t KanaROMLetterNum = 73;
+const uint8_t KanaROMLetterNum = 88;
 extern ROMCharacterType KanaROMLetters[KanaROMLetterNum];
 
 #endif // ROM_Katakana_h
