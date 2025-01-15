@@ -13,6 +13,8 @@
 #ifndef LCDI2C_UTF8_h
 #define LCDI2C_UTF8_h
 
+#include <Arduino.h>
+
 #include "LCDI2C.h"
 #include "LCDI2C_Types.h"
 
