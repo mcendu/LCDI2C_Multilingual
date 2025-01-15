@@ -23,9 +23,6 @@
 
 #include "../base/LCDI2C_Types.h"
 
-const uint8_t Dakuten = 0xDE;
-const uint8_t Handakuten = 0xDF;
-
 // Struct for Katakana unicode character with diacritic (dakuten or handakuten)
 typedef struct {
   uint16_t const code;			// Character code point

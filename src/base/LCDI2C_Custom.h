@@ -54,7 +54,7 @@ protected:
     memset(dst, 0, 8);
     for (uint8_t i = 0; i < 8; i++) {
       for (uint8_t j = 0; j < 5; j++) {
-    	  element = ((src[j] & mask) << i) >> j + 3;
+    	  element = ((src[j] & mask) << i) >> (j + 3);
    		  dst[i] |= element;
       }
   	  mask >>= 1;

@@ -3,6 +3,9 @@
 #include "Katakana.h"
 #include "../base/LCDI2C_Types.h"
 
+const uint8_t Dakuten = 0xDE;
+const uint8_t Handakuten = 0xDF;
+
 KanaDiacriticCharacterType KanaDiacriticCharacters [KanaDiacriticCharacterNum] = {
   {0x30AC, 0x30AB, Dakuten},	// ガ Ga
   {0x30AE, 0x30AD, Dakuten},	// ギ Gi
