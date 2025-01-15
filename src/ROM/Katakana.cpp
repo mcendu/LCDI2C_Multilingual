@@ -2,12 +2,13 @@
 
 #include "Katakana.h"
 #include "../base/LCDI2C_Types.h"
+#include "../base/pgmspace.h"
 
 const uint8_t Dakuten = 0xDE;
 const uint8_t Handakuten = 0xDF;
 
-KanaDiacriticCharacterType KanaDiacriticCharacters[KanaDiacriticCharacterNum] =
-    {
+PROGMEM const KanaDiacriticCharacterType
+    KanaDiacriticCharacters[KanaDiacriticCharacterNum] = {
         {0x30AC, 0x30AB, Dakuten},    // ガ Ga
         {0x30AE, 0x30AD, Dakuten},    // ギ Gi
         {0x30B0, 0x30AF, Dakuten},    // グ Gu

@@ -34,7 +34,7 @@ typedef struct {
 // Array for mapping Kana character with diacritic to base Kana character +
 // diacritic
 const uint8_t KanaDiacriticCharacterNum = 31;
-extern KanaDiacriticCharacterType
+extern PROGMEM const KanaDiacriticCharacterType
     KanaDiacriticCharacters[KanaDiacriticCharacterNum];
 
 // List of Katakana characters, punctuations, some symbols built in the ROM
