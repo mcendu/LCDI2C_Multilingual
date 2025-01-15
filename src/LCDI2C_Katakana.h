@@ -36,7 +36,8 @@ public:
   }
 
 protected:
-  uint8_t nextWordLength(const byte[], uint16_t, uint16_t code) override {
+  uint8_t nextWordLength(const byte text[], uint16_t start,
+                         uint16_t code) override {
     // Check for Katakana words with diacritic
     for (uint8_t idx = 0; idx < KanaDiacriticCharacterNum; idx++)
       if (KanaDiacriticCharacters[idx].code == code)
@@ -47,48 +48,34 @@ protected:
       return 1;
 
     // Check for English word
-    return 1; //// Predicting English word length not supported yet!
+    return LCDI2C_UTF8::nextWordLength(text, start, code);
   };
 
   uint16_t getCharacter(uint16_t code) override {
-    uint8_t ord, diacritic = 0;
+    uint8_t base, diacritic = 0;
 
-    if (code < 0x7E) { // ASCII character?
-      if (code > 0x1F)
-        return (uint16_t)code; // Printable
-      else
-        return (uint16_t)'*'; // Non-printable
-    }
-
-    // Separate one Katakana character with diacritic into base character and
-    // diacritic character
-    for (uint8_t idx = 0; idx < KanaDiacriticCharacterNum; idx++)
-      if (KanaDiacriticCharacters[idx].code == code) {
-        code = KanaDiacriticCharacters[idx].base;
-        diacritic = KanaDiacriticCharacters[idx].diacritic;
+    // Look for katakana
+    if (code >= 0x30A0 && code < 0x3100) {
+      // Separate one Katakana character with diacritic into base character and
+      // diacritic character
+      for (uint8_t idx = 0; idx < KanaDiacriticCharacterNum; idx++) {
+        if (KanaDiacriticCharacters[idx].code == code) {
+          code = KanaDiacriticCharacters[idx].base;
+          diacritic = KanaDiacriticCharacters[idx].diacritic;
+        }
       }
+    }
 
     // Look for Latin Fullwidth character
     if (code >= 0xFF01 && code <= 0xFF5D)
       return code - 0xFEE0; // Convert Latin Fullwidth to Latin ASCII
 
-    // Base Katakana character (without diacritic) or customized characters
-    // (looking in ROM first)
-    ord = getROMCharacter(code);
-    if (ord == NOTFOUND) {              // Character ready in ROM?
-      if (customizedLanguage != NULL) { // Customized character in CGRAM ?
-        ord = customizedLanguage->getCharacter(code, cursorColumn, cursorRow);
-        if (ord != NOTFOUND)
-          return (uint16_t)ord; // Customized character
-      } else {
-        return (uint16_t)'*'; // Unknown character
-      }
-    }
+    base = LCDI2C_UTF8::getCharacter(code);
 
     if (diacritic == 0)
-      return (uint16_t)ord;
+      return (uint16_t)base;
     else
-      return uint16_t(ord) | (diacritic << 8);
+      return uint16_t(base) | (diacritic << 8);
   }
 };
 
