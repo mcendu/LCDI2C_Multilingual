@@ -25,17 +25,19 @@
 
 // Struct for Katakana unicode character with diacritic (dakuten or handakuten)
 typedef struct {
-  uint16_t const code;			// Character code point
-  uint16_t const base;			// Character code point
-  uint8_t const diacritic;		// Dakuten or Handakuten
+  uint16_t const code;     // Character code point
+  uint16_t const base;     // Character code point
+  uint8_t const diacritic; // Dakuten or Handakuten
 } KanaDiacriticCharacterType;
 
-// Array for mapping Kana character with diacritic to base Kana character + diacritic
+// Array for mapping Kana character with diacritic to base Kana character +
+// diacritic
 const uint8_t KanaDiacriticCharacterNum = 29;
-extern KanaDiacriticCharacterType KanaDiacriticCharacters [KanaDiacriticCharacterNum];
+extern KanaDiacriticCharacterType
+    KanaDiacriticCharacters[KanaDiacriticCharacterNum];
 
 // List of Katakana characters, punctuations, some symbols built in the ROM
-const uint8_t  KanaROMLetterNum = 73;
-extern ROMCharacterType KanaROMLetters [KanaROMLetterNum];
+const uint8_t KanaROMLetterNum = 73;
+extern ROMCharacterType KanaROMLetters[KanaROMLetterNum];
 
 #endif // ROM_Katakana_h

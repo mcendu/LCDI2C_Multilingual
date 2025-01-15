@@ -13,16 +13,16 @@
 #ifndef Custom_Symbols_h
 #define Custom_Symbols_h
 
-#include "../base/LCDI2C_Types.h"
 #include "../base/LCDI2C_Custom.h"
+#include "../base/LCDI2C_Types.h"
 
 const uint8_t SymbolCustomLetterNum = 2;
 // List of custom Unicode characters
-extern CustomCharacterType SymbolCustomLetters [SymbolCustomLetterNum];
+extern CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum];
 
 class CustomizedSymbols : public CustomizedLanguage {
 public:
-  CustomizedSymbols(LCDI2C_UTF8* lcd) : CustomizedLanguage(lcd) {
+  CustomizedSymbols(LCDI2C_UTF8 *lcd) : CustomizedLanguage(lcd) {
     CustomLetterNum = SymbolCustomLetterNum;
     CustomLetters = SymbolCustomLetters;
   }
@@ -30,14 +30,14 @@ public:
 protected:
   uint8_t getAlternativeLetter(uint16_t c) override {
     switch (c) {
-      case 0x00B0:  // degree symbol
-        return 0xDF;
-      case 0x20AC:  // Euro sign
-        return 0x45;
-      default:  // Input code point is not symbols!
-        return '*';
+    case 0x00B0: // degree symbol
+      return 0xDF;
+    case 0x20AC: // Euro sign
+      return 0x45;
+    default: // Input code point is not symbols!
+      return '*';
     }
   }
 };
 
-#endif  // Custom_Symbols_h
+#endif // Custom_Symbols_h

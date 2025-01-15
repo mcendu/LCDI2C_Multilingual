@@ -17,10 +17,10 @@
 #include <Arduino.h>
 
 LCDI2C_UTF8::LCDI2C_UTF8(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows)
-    : LCDI2C(lcd_addr, lcd_cols, lcd_rows), longestWordLength(0), customizedLanguage(NULL),
-      minExcludedChar(0), maxExcludedChar(0), nextWordEndCol(0), colNum(lcd_cols),
-      rowNum(lcd_rows), cursorColumn(0), cursorRow(0),
-      autoNewLine(true) {}
+    : LCDI2C(lcd_addr, lcd_cols, lcd_rows), longestWordLength(0),
+      customizedLanguage(NULL), minExcludedChar(0), maxExcludedChar(0),
+      nextWordEndCol(0), colNum(lcd_cols), rowNum(lcd_rows), cursorColumn(0),
+      cursorRow(0), autoNewLine(true) {}
 
 void LCDI2C_UTF8::begin(uint8_t cols, uint8_t lines, uint8_t dotsize) {
   colNum = cols;

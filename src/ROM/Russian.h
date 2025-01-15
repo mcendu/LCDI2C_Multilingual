@@ -20,7 +20,7 @@
 #include "../base/LCDI2C_Types.h"
 
 // List of Russian letters and some symbols built in the ROM
-const uint8_t  RussianROMLetterNum = 68;
-extern ROMCharacterType RussianROMLetters [RussianROMLetterNum];
+const uint8_t RussianROMLetterNum = 68;
+extern ROMCharacterType RussianROMLetters[RussianROMLetterNum];
 
-#endif  // ROM_Russian_h
+#endif // ROM_Russian_h

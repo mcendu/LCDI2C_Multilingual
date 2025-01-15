@@ -22,7 +22,6 @@
 #include "base/LCDI2C_Custom.h"
 #include "base/LCDI2C_UTF8.h"
 
-
 class LCDI2C_RussianLatin : public LCDI2C_UTF8 {
 public:
   LCDI2C_RussianLatin(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows)

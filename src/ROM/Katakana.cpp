@@ -6,38 +6,39 @@
 const uint8_t Dakuten = 0xDE;
 const uint8_t Handakuten = 0xDF;
 
-KanaDiacriticCharacterType KanaDiacriticCharacters [KanaDiacriticCharacterNum] = {
-  {0x30AC, 0x30AB, Dakuten},	// ガ Ga
-  {0x30AE, 0x30AD, Dakuten},	// ギ Gi
-  {0x30B0, 0x30AF, Dakuten},	// グ Gu
-  {0x30B2, 0x30B1, Dakuten},	// ゲ Ge
-  {0x30B4, 0x30B3, Dakuten},	// ゴ Go
-  {0x30B6, 0x30B5, Dakuten},	// ザ Za
-  {0x30B8, 0x30B7, Dakuten},	// ジ Ji
-  {0x30BA, 0x30B9, Dakuten},	// ズ Zu
-  {0x30BC, 0x30BB, Dakuten},	// ゼ Ze
-  {0x30BE, 0x30BD, Dakuten},	// ゾ Zo
-  {0x30C0, 0x30BF, Dakuten},	// ダ Da
-  {0x30C2, 0x30C1, Dakuten},	// ヂ Ji
-  {0x30C5, 0x30C4, Dakuten},	// ヅ Zu
-  {0x30C7, 0x30C6, Dakuten},	// デ De
-  {0x30C9, 0x30C8, Dakuten},	// ド Do
-  {0x30D0, 0x30CF, Dakuten},	// バ Ba
-  {0x30D1, 0x30CF, Handakuten},	// パ Pa
-  {0x30D3, 0x30D2, Dakuten},	// ビ Bi
-  {0x30D4, 0x30D2, Handakuten},	// ピ Pi
-  {0x30D6, 0x30D5, Dakuten},	// ブ Bu
-  {0x30D7, 0x30D5, Handakuten},	// プ Pu
-  {0x30D9, 0x30D8, Dakuten},	// ベ Be
-  {0x30DA, 0x30D8, Handakuten},	// ペ Pe
-  {0x30DC, 0x30DB, Dakuten},	// ボ Bo
-  {0x30DD, 0x30DB, Handakuten},	// ポ Po
-  {0x30F4, 0x30A6, Dakuten},	// ヴ
-  {0x30F7, 0x30EF, Dakuten},	// ヷ
-  //{0x30F8, 0x30F0, Dakuten},	// ヸ
-  //{0x30F9, 0x30F1, Dakuten},	// ヹ
-  {0x30FA, 0x30F2, Dakuten},	// ヺ
-  {0x30FE, 0x30FD, Dakuten}		// ヾ
+KanaDiacriticCharacterType KanaDiacriticCharacters[KanaDiacriticCharacterNum] =
+    {
+        {0x30AC, 0x30AB, Dakuten},    // ガ Ga
+        {0x30AE, 0x30AD, Dakuten},    // ギ Gi
+        {0x30B0, 0x30AF, Dakuten},    // グ Gu
+        {0x30B2, 0x30B1, Dakuten},    // ゲ Ge
+        {0x30B4, 0x30B3, Dakuten},    // ゴ Go
+        {0x30B6, 0x30B5, Dakuten},    // ザ Za
+        {0x30B8, 0x30B7, Dakuten},    // ジ Ji
+        {0x30BA, 0x30B9, Dakuten},    // ズ Zu
+        {0x30BC, 0x30BB, Dakuten},    // ゼ Ze
+        {0x30BE, 0x30BD, Dakuten},    // ゾ Zo
+        {0x30C0, 0x30BF, Dakuten},    // ダ Da
+        {0x30C2, 0x30C1, Dakuten},    // ヂ Ji
+        {0x30C5, 0x30C4, Dakuten},    // ヅ Zu
+        {0x30C7, 0x30C6, Dakuten},    // デ De
+        {0x30C9, 0x30C8, Dakuten},    // ド Do
+        {0x30D0, 0x30CF, Dakuten},    // バ Ba
+        {0x30D1, 0x30CF, Handakuten}, // パ Pa
+        {0x30D3, 0x30D2, Dakuten},    // ビ Bi
+        {0x30D4, 0x30D2, Handakuten}, // ピ Pi
+        {0x30D6, 0x30D5, Dakuten},    // ブ Bu
+        {0x30D7, 0x30D5, Handakuten}, // プ Pu
+        {0x30D9, 0x30D8, Dakuten},    // ベ Be
+        {0x30DA, 0x30D8, Handakuten}, // ペ Pe
+        {0x30DC, 0x30DB, Dakuten},    // ボ Bo
+        {0x30DD, 0x30DB, Handakuten}, // ポ Po
+        {0x30F4, 0x30A6, Dakuten},    // ヴ
+        {0x30F7, 0x30EF, Dakuten},    // ヷ
+        //{0x30F8, 0x30F0, Dakuten},	// ヸ
+        //{0x30F9, 0x30F1, Dakuten},	// ヹ
+        {0x30FA, 0x30F2, Dakuten}, // ヺ
+        {0x30FE, 0x30FD, Dakuten}  // ヾ
 };
 
 ROMCharacterType KanaROMLetters [KanaROMLetterNum] = {

@@ -1,6 +1,7 @@
 /*
   ** RussianLatin ROM data **
-  Capital Russian & Latin code points to equivalent characters in Russian Latin ROM
+  Capital Russian & Latin code points to equivalent characters in Russian Latin
+  ROM
 
   ** LCD chips using Russian Latin character ROM (capital only) **
   - Hitachi HD44780UA02
@@ -18,8 +19,9 @@
 
 #include "../base/LCDI2C_Types.h"
 
-const uint8_t  RussianLatinROMLetterNum = 33;
-// List of capital Russian, Latin, Greek letters and some symbols built in the ROM
-extern ROMCharacterType RussianLatinROMLetters [RussianLatinROMLetterNum];
+const uint8_t RussianLatinROMLetterNum = 33;
+// List of capital Russian, Latin, Greek letters and some symbols built in the
+// ROM
+extern ROMCharacterType RussianLatinROMLetters[RussianLatinROMLetterNum];
 
-#endif  // ROM_RussianLatin_h
+#endif // ROM_RussianLatin_h
