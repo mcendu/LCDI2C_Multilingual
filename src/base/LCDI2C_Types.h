@@ -13,6 +13,8 @@
 #ifndef LCDI2C_Types_h
 #define LCDI2C_Types_h
 
+#include <stdint.h>
+
 #define CGRAM_SIZE 8  // Max number of customized characters in CGRAM
 #define NOTFOUND 255  // Default error code (so ROM last code FF must reserved)
 

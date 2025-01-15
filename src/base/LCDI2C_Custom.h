@@ -13,6 +13,8 @@
 #ifndef LCDI2C_Custom_h
 #define LCDI2C_Custom_h
 
+#include <stdint.h>
+
 #include "LCDI2C_Types.h"
 #include "LCDI2C_UTF8.h"
 

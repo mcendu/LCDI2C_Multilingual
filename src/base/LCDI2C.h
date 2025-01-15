@@ -4,7 +4,7 @@
 #ifndef LCDI2C_h
 #define LCDI2C_h
 
-#include <inttypes.h>
+#include <stdint.h>
 #include "Print.h" 
 #include <Wire.h>
 
