@@ -3,7 +3,7 @@
 
 #include "LCDI2C_Types.h"
 
-uint8_t getROMCharacter(uint16_t code, PROGMEM const ROMCharacterType *table,
+uint8_t getROMCharacter(uint16_t code, const ROMCharacterType *table,
                         uint8_t count) {
   for (uint8_t i = 0; i < count; ++i) {
     if (code == pgm_read_word(&(table[i].code)))

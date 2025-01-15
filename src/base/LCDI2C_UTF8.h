@@ -61,7 +61,7 @@ private:
 
 protected:
   uint8_t ROMLetterNum;                       // Size of ROM letter mapping
-  PROGMEM const ROMCharacterType *ROMLetters; // Link to ROM letter mapping
+  const ROMCharacterType *ROMLetters; // Link to ROM letter mapping
   CustomizedLanguage *customizedLanguage;     // Link to Customized letter class
   uint8_t minExcludedChar;
   uint8_t maxExcludedChar;

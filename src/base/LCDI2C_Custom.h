@@ -48,7 +48,7 @@ protected:
   uint8_t getLongestWordLength() { return longestWordLength; }
 
   uint8_t CustomLetterNum;            // Size of customized letter map
-  PROGMEM const CustomCharacterType *CustomLetters; // Link to customized letter map
+  const CustomCharacterType *CustomLetters; // Link to customized letter map
   LCDI2C_UTF8 *screen;
   uint8_t cgramLetters[CGRAM_SIZE] =
       { // Indexes of Vietnamese letters in use in CGRAM. NOTFOUND: unallocated
