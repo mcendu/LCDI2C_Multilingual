@@ -7,7 +7,7 @@
 
 #include "../base/LCDI2C_Types.h"
 
-ROMCharacterType GenericROMLetters[GenericROMLetterNum] = {
+PROGMEM const ROMCharacterType GenericROMLetters[GenericROMLetterNum] = {
     {0x00A5, 0x5C}, // ¥ Yen
     {0x00F7, 0xFD}, // ÷ Division
 
@@ -29,7 +29,7 @@ ROMCharacterType GenericROMLetters[GenericROMLetterNum] = {
     {0x221E, 0xF3}, // ∞ infinity
 };
 
-ROMCharacterType LatinROMLetters[LatinROMLetterNum] = {
+PROGMEM const ROMCharacterType LatinROMLetters[LatinROMLetterNum] = {
     // {0x0060, 0xB3}, // ` grave accent
 
     {0x00A1, 0xA9}, // ¡ inverted exclamation mark
@@ -122,7 +122,7 @@ ROMCharacterType LatinROMLetters[LatinROMLetterNum] = {
     {0x2265, 0xBA}, // ≥ GTE
 };
 
-ROMCharacterType RussianROMLetters[RussianROMLetterNum] = {
+PROGMEM const ROMCharacterType RussianROMLetters[RussianROMLetterNum] = {
     {0x00A2, 0x5C}, // ¢ Cent
     {0x00A3, 0xCF}, // £ Pound
     {0x00D7, 0xD5}, // × Multiplication
@@ -201,7 +201,7 @@ ROMCharacterType RussianROMLetters[RussianROMLetterNum] = {
     {0x21B5, 0x7E}, // ↵ enter
 };
 
-ROMCharacterType RussianLatinROMLetters[RussianLatinROMLetterNum] = {
+PROGMEM const ROMCharacterType RussianLatinROMLetters[RussianLatinROMLetterNum] = {
     {0x03A3, 0x94}, // Σ sigma (capital)
     {0x03A9, 0x9A}, // Ω omega (capital)
     {0x03B1, 0x90}, // α alpha

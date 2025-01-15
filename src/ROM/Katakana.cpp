@@ -41,7 +41,7 @@ KanaDiacriticCharacterType KanaDiacriticCharacters[KanaDiacriticCharacterNum] =
         {0x30FE, 0x30FD, Dakuten}     // ヾ
 };
 
-ROMCharacterType KanaROMLetters[KanaROMLetterNum] = {
+PROGMEM const ROMCharacterType KanaROMLetters[KanaROMLetterNum] = {
     {0x00A2, 0xEC}, // ¢ Cent
     {0x00A5, 0x5C}, // ¥ Yen
     {0x00F7, 0xFD}, // ÷ Division

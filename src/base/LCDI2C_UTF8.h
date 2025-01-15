@@ -17,6 +17,7 @@
 
 #include "LCDI2C.h"
 #include "LCDI2C_Types.h"
+#include "pgmspace.h"
 
 class CustomizedLanguage;
 
@@ -59,9 +60,9 @@ private:
   uint8_t checkNextWordCol;
 
 protected:
-  uint8_t ROMLetterNum;                   // Size of ROM letter mapping
-  ROMCharacterType *ROMLetters;           // Link to ROM letter mapping
-  CustomizedLanguage *customizedLanguage; // Link to Customized letter class
+  uint8_t ROMLetterNum;                       // Size of ROM letter mapping
+  PROGMEM const ROMCharacterType *ROMLetters; // Link to ROM letter mapping
+  CustomizedLanguage *customizedLanguage;     // Link to Customized letter class
   uint8_t minExcludedChar;
   uint8_t maxExcludedChar;
   uint8_t nextWordEndCol;
@@ -74,7 +75,6 @@ protected:
   uint16_t getCodePoint(const byte[], uint8_t &);
   virtual uint16_t getCharacter(uint16_t code);
   virtual uint8_t nextWordLength(const byte[], uint16_t, uint16_t);
-  uint8_t getROMCharacter(uint16_t);
 };
 
 #endif // LCDI2C_UTF8_h

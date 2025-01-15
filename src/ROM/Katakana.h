@@ -22,6 +22,7 @@
 #define ROM_Katakana_h
 
 #include "../base/LCDI2C_Types.h"
+#include "../base/pgmspace.h"
 
 // Struct for Katakana unicode character with diacritic (dakuten or handakuten)
 typedef struct {
@@ -38,6 +39,6 @@ extern KanaDiacriticCharacterType
 
 // List of Katakana characters, punctuations, some symbols built in the ROM
 const uint8_t KanaROMLetterNum = 88;
-extern ROMCharacterType KanaROMLetters[KanaROMLetterNum];
+extern PROGMEM const ROMCharacterType KanaROMLetters[KanaROMLetterNum];
 
 #endif // ROM_Katakana_h

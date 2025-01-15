@@ -19,9 +19,10 @@
 #define ROM_Latin_h
 
 #include "../base/LCDI2C_Types.h"
+#include "../base/pgmspace.h"
 
 // List of Latin-1 letters and some symbols built in the ROM
 const uint8_t LatinROMLetterNum = 80;
-extern ROMCharacterType LatinROMLetters[LatinROMLetterNum];
+extern PROGMEM const ROMCharacterType LatinROMLetters[LatinROMLetterNum];
 
 #endif // ROM_Latin_h

@@ -13,6 +13,7 @@
 
 #include "LCDI2C_UTF8.h"
 #include "LCDI2C_Custom.h"
+#include "LCDI2C_Table.h"
 #include "LCDI2C_Types.h"
 #include <Arduino.h>
 
@@ -160,15 +161,6 @@ uint8_t LCDI2C_UTF8::nextWordLength(const byte text[], uint16_t start,
   return length;
 }
 
-// Find corresponding symbols in LCD character table
-uint8_t LCDI2C_UTF8::getROMCharacter(uint16_t c) {
-  for (int idx = 0; idx < ROMLetterNum; idx++)
-    if (c == ROMLetters[idx].code)
-      return ROMLetters[idx].link;
-
-  return NOTFOUND;
-}
-
 // Mapping from Code point to one equivalent character on LCD's ROM or CGRAM.
 uint16_t LCDI2C_UTF8::getCharacter(uint16_t code) {
   uint8_t ord;
@@ -191,7 +183,7 @@ uint16_t LCDI2C_UTF8::getCharacter(uint16_t code) {
   }
 
   // Look for Unicode character in ROM
-  ord = getROMCharacter(code);
+  ord = getROMCharacter(code, ROMLetters, ROMLetterNum);
   if (ord != NOTFOUND)    // Character is in ROM?
     return (uint16_t)ord; // Return ROM character
 

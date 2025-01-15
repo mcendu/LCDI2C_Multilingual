@@ -22,9 +22,10 @@
 #define ROM_Generic_h
 
 #include "../base/LCDI2C_Types.h"
+#include "../base/pgmspace.h"
 
 // List of some symbols built in the ROM
 const uint8_t GenericROMLetterNum = 16;
-extern ROMCharacterType GenericROMLetters[GenericROMLetterNum];
+extern PROGMEM const ROMCharacterType GenericROMLetters[GenericROMLetterNum];
 
 #endif // ROM_Generic_h
