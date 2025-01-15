@@ -30,16 +30,7 @@ public:
   }
 
 protected:
-  uint8_t getAlternativeLetter(uint16_t c) override {
-    switch (c) {
-    case 0x00B0: // degree symbol
-      return 0xDF;
-    case 0x20AC: // Euro sign
-      return 0x45;
-    default: // Input code point is not symbols!
-      return '*';
-    }
-  }
+  uint8_t getAlternativeLetter(uint16_t c) override;
 };
 
 #endif // Custom_Symbols_h
