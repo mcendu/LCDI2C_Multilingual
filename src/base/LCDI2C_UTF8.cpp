@@ -70,7 +70,7 @@ void LCDI2C_UTF8::setAutoNewLine(bool stat = true) { autoNewLine = stat; }
 
 void LCDI2C_UTF8::newLine() {
   cursorColumn = 0;
-  cursorRow = ++cursorRow % rowNum;
+  cursorRow = (cursorRow + 1) % rowNum;
   nextWordEndCol = checkNextWordCol;
   LCDI2C::setCursor(cursorColumn, cursorRow);
 }
