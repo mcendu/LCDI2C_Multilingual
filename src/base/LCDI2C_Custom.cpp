@@ -21,7 +21,7 @@ uint8_t CustomizedLanguage::getCharacter(uint16_t code, uint8_t col,
       // Fix wrong cursor moving when creating custom character
       screen->setCursor(col, row);
     } else // Yes -> Replace with alternative letter
-      ord = (uint8_t)getAlternativeLetter(CustomLetters[idx].code);
+      ord = (uint8_t)getAlternativeLetter(code);
   }
   return ord;
 }
@@ -44,11 +44,16 @@ void CustomizedLanguage::tranpose(const uint8_t src[], uint8_t dst[]) {
 }
 
 uint8_t CustomizedLanguage::createLetter(uint8_t idx) {
+  uint8_t bitmap[8];
   uint8_t placeOrd = cgramLettersNum++;
+  
+  // load character bitmap
+  uint8_t compressed[5];
+  memcpy_P(compressed, &(CustomLetters[idx].mapT), 5);
 
   // Create new coresponding letter in CGRAM
-  tranpose(CustomLetters[idx].mapT, charmap);
-  screen->createChar(placeOrd, charmap);
+  tranpose(compressed, bitmap);
+  screen->createChar(placeOrd, bitmap);
   cgramLetters[placeOrd] = idx;
 
   return placeOrd;
@@ -56,7 +61,7 @@ uint8_t CustomizedLanguage::createLetter(uint8_t idx) {
 
 uint8_t CustomizedLanguage::getLetterIndex(uint16_t c) {
   for (int idx = 0; idx < CustomLetterNum; idx++)
-    if (CustomLetters[idx].code == c)
+    if (pgm_read_word(&(CustomLetters[idx].code)) == c)
       return idx;
   return NOTFOUND;
 }

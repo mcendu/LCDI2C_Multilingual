@@ -3,7 +3,7 @@
 #include "Symbols.h"
 #include "Vietnamese.h"
 
-CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum] = {
+PROGMEM const CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum] = {
     {0x00B0,
      {0b00000000, 0b01100000, 0b10010000, 0b10010000,
       0b01100000}}, // ° (degree symbol)
@@ -12,7 +12,7 @@ CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum] = {
       0b10000010}} // € (Euro sign)
 };
 
-CustomCharacterType VietnameseCustomLetters[VietnameseCustomLetterNum] = {
+PROGMEM const CustomCharacterType VietnameseCustomLetters[VietnameseCustomLetterNum] = {
     {0x00C0, {0b00111110, 0b11001000, 0b11001000, 0b11001000, 0b00111110}}, // À
     {0x00C1, {0b00111110, 0b01001000, 0b01001000, 0b01001000, 0b10111110}}, // Á
     {0x00C2, {0b00111110, 0b01001000, 0b11001000, 0b01001000, 0b00111110}}, // Â

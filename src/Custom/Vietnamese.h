@@ -19,11 +19,10 @@
 #include "../base/LCDI2C_Custom.h"
 #include "../base/LCDI2C_Types.h"
 
-
 // List of Vietnamese letters with diacritics and custom Unicode characters
 const uint8_t VietnameseCustomLetterNum = 136;
-extern CustomCharacterType VietnameseCustomLetters[VietnameseCustomLetterNum];
-;
+extern PROGMEM const CustomCharacterType
+    VietnameseCustomLetters[VietnameseCustomLetterNum];
 
 class CustomizedVietnamese : public CustomizedLanguage {
 public:

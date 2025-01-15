@@ -18,6 +18,7 @@
 
 #include "LCDI2C_Types.h"
 #include "LCDI2C_UTF8.h"
+#include "pgmspace.h"
 
 class CustomizedLanguage {
 public:
@@ -47,13 +48,12 @@ protected:
   uint8_t getLongestWordLength() { return longestWordLength; }
 
   uint8_t CustomLetterNum;            // Size of customized letter map
-  CustomCharacterType *CustomLetters; // Link to customized letter map
+  PROGMEM const CustomCharacterType *CustomLetters; // Link to customized letter map
   LCDI2C_UTF8 *screen;
   uint8_t cgramLetters[CGRAM_SIZE] =
       { // Indexes of Vietnamese letters in use in CGRAM. NOTFOUND: unallocated
           NOTFOUND, NOTFOUND, NOTFOUND, NOTFOUND, NOTFOUND,
           NOTFOUND, NOTFOUND, NOTFOUND}; // Change this with CGRAM_SIZE
-  uint8_t charmap[8];                    // Template used by createChar()
   uint8_t longestWordLength;
   uint8_t cgramLettersNum = 0; // Number of elements of cgramLetters
 };                             // CustomizedLanguage

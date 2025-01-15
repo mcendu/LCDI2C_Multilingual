@@ -15,10 +15,12 @@
 
 #include "../base/LCDI2C_Custom.h"
 #include "../base/LCDI2C_Types.h"
+#include "../base/pgmspace.h"
 
 const uint8_t SymbolCustomLetterNum = 2;
 // List of custom Unicode characters
-extern CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum];
+extern PROGMEM const CustomCharacterType
+    SymbolCustomLetters[SymbolCustomLetterNum];
 
 class CustomizedSymbols : public CustomizedLanguage {
 public:
