@@ -3,19 +3,30 @@
 #include "../LCDI2C_Katakana.h"
 #include "../base/pgmspace.h"
 
+static int cmpDiacriticEntry(const void *keyp, const void *entryp) {
+  uint16_t code = *(uint16_t *)keyp;
+  const KanaDiacriticCharacterType *entry =
+      (const KanaDiacriticCharacterType *)entryp;
+  uint16_t entryCode = pgm_read_word(&(entry->code));
+  return (code > entryCode) - (code < entryCode);
+}
+
 static uint8_t findDiacriticCharacter(uint16_t code, uint16_t *base,
                                       uint8_t *diacritic) {
-  for (uint8_t idx = 0; idx < KanaDiacriticCharacterNum; idx++) {
-    if (pgm_read_word(&(KanaDiacriticCharacters[idx].code)) == code) {
-      if (base)
-        *base = pgm_read_word(&(KanaDiacriticCharacters[idx].base));
-      if (diacritic)
-        *diacritic = pgm_read_byte(&(KanaDiacriticCharacters[idx].diacritic));
-      return 1;
-    }
-  }
+  const KanaDiacriticCharacterType *entry =
+      (const KanaDiacriticCharacterType *)bsearch(
+          &code, KanaDiacriticCharacters, KanaDiacriticCharacterNum,
+          sizeof(KanaDiacriticCharacterType), &cmpDiacriticEntry);
 
-  return 0;
+  if (entry) {
+    if (base)
+      *base = pgm_read_word(&(entry->base));
+    if (diacritic)
+      *diacritic = pgm_read_byte(&(entry->diacritic));
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 uint8_t LCDI2C_Katakana::nextWordLength(const byte text[], uint16_t start,
