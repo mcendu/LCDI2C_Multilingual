@@ -38,7 +38,7 @@ extern PROGMEM const KanaDiacriticCharacterType
     KanaDiacriticCharacters[KanaDiacriticCharacterNum];
 
 // List of Katakana characters, punctuations, some symbols built in the ROM
-const uint8_t KanaROMLetterNum = 88;
+const uint8_t KanaROMLetterNum = 87;
 extern PROGMEM const ROMCharacterType KanaROMLetters[KanaROMLetterNum];
 
 #endif // ROM_Katakana_h

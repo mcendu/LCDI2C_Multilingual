@@ -93,12 +93,6 @@ PROGMEM const ROMCharacterType LatinROMLetters[LatinROMLetterNum] = {
     {0x00FC, 0x81}, // ü u with diaeresis
     {0x00FF, 0x98}, // ÿ y with diaeresis
 
-    {0x2190, 0xC8}, // ← left arrow
-    {0x2191, 0xC5}, // ↑ up arrow
-    {0x2192, 0xC7}, // → right arrow
-    {0x2193, 0xC6}, // ↓ down arrow
-    {0x21B5, 0xC4}, // ↵ enter
-
     {0x03A3, 0xDA}, // Σ sigma (capital)
     {0x03A9, 0xDE}, // Ω omega (capital)
     {0x03B1, 0xDF}, // α alpha
@@ -114,6 +108,12 @@ PROGMEM const ROMCharacterType LatinROMLetters[LatinROMLetterNum] = {
     {0x03C3, 0xEF}, // σ sigma
     {0x03C8, 0xF3}, // ψ psi
     {0x03C9, 0xF4}, // ω omega
+
+    {0x2190, 0xC8}, // ← left arrow
+    {0x2191, 0xC5}, // ↑ up arrow
+    {0x2192, 0xC7}, // → right arrow
+    {0x2193, 0xC6}, // ↓ down arrow
+    {0x21B5, 0xC4}, // ↵ enter
 
     {0x221A, 0xBE}, // √ sqrt
     {0x221E, 0xC2}, // ∞ infinity
@@ -254,7 +254,7 @@ PROGMEM const ROMCharacterType RussianLatinROMLetters[RussianLatinROMLetterNum] 
     {0x2193, 0x19}, // ↓ down arrow
     {0x21B5, 0x17}, // ↵ enter
 
+    {0x221E, 0x9C}, // ∞ infinity
     {0x2264, 0x1C}, // ≤ LTE
     {0x2265, 0x1D}, // ≥ GTE
-    {0x221E, 0x9C}, // ∞ infinity
 };
