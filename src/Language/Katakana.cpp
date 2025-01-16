@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 
 #include "../LCDI2C_Katakana.h"
-#include "../base/pgmspace.h"
+#include <Arduino.h>
 
 static int cmpDiacriticEntry(const void *keyp, const void *entryp) {
   uint16_t code = *(uint16_t *)keyp;

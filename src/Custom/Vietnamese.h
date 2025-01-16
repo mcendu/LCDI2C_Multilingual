@@ -18,6 +18,7 @@
 
 #include "../base/LCDI2C_Custom.h"
 #include "../base/LCDI2C_Types.h"
+#include <Arduino.h>
 
 // List of Vietnamese letters with diacritics and custom Unicode characters
 const uint8_t VietnameseCustomLetterNum = 136;

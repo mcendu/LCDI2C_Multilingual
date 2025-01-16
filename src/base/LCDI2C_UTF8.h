@@ -17,7 +17,6 @@
 
 #include "LCDI2C.h"
 #include "LCDI2C_Types.h"
-#include "pgmspace.h"
 
 class CustomizedLanguage;
 

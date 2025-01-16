@@ -6,6 +6,7 @@
 #include "RussianLatin.h"
 
 #include "../base/LCDI2C_Types.h"
+#include <Arduino.h>
 
 PROGMEM const ROMCharacterType GenericROMLetters[GenericROMLetterNum] = {
     {0x00A5, 0x5C}, // ¥ Yen

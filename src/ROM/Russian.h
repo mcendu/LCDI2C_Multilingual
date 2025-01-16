@@ -18,7 +18,7 @@
 #define ROM_Russian_h
 
 #include "../base/LCDI2C_Types.h"
-#include "../base/pgmspace.h"
+#include <Arduino.h>
 
 // List of Russian letters and some symbols built in the ROM
 const uint8_t RussianROMLetterNum = 74;

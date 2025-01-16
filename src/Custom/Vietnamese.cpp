@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 #include "Vietnamese.h"
+#include <Arduino.h>
 
 PROGMEM const CustomCharacterType
     VietnameseCustomLetters[VietnameseCustomLetterNum] = {

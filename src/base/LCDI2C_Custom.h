@@ -18,7 +18,7 @@
 
 #include "LCDI2C_Types.h"
 #include "LCDI2C_UTF8.h"
-#include "pgmspace.h"
+#include <Arduino.h>
 
 class CustomizedLanguage {
 public:

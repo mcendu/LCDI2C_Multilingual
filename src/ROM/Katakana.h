@@ -22,7 +22,7 @@
 #define ROM_Katakana_h
 
 #include "../base/LCDI2C_Types.h"
-#include "../base/pgmspace.h"
+#include <Arduino.h>
 
 // Struct for Katakana unicode character with diacritic (dakuten or handakuten)
 typedef struct {

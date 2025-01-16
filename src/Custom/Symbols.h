@@ -15,7 +15,7 @@
 
 #include "../base/LCDI2C_Custom.h"
 #include "../base/LCDI2C_Types.h"
-#include "../base/pgmspace.h"
+#include <Arduino.h>
 
 const uint8_t SymbolCustomLetterNum = 2;
 // List of custom Unicode characters

@@ -1,7 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 
 #include "Symbols.h"
-#include "Vietnamese.h"
 
 PROGMEM const CustomCharacterType SymbolCustomLetters[SymbolCustomLetterNum] = {
     {0x00B0,

@@ -2,7 +2,7 @@
 
 #include "Katakana.h"
 #include "../base/LCDI2C_Types.h"
-#include "../base/pgmspace.h"
+#include <Arduino.h>
 
 const uint8_t Dakuten = 0xDE;
 const uint8_t Handakuten = 0xDF;

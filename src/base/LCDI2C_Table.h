@@ -3,7 +3,7 @@
 #define LCDI2C_Table_h
 
 #include "LCDI2C_Types.h"
-#include "pgmspace.h"
+#include <Arduino.h>
 
 extern uint8_t getROMCharacter(uint16_t code,
                                const ROMCharacterType *table,
