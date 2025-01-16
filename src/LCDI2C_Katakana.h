@@ -32,7 +32,7 @@ public:
       : LCDI2C_UTF8(lcd_addr, lcd_cols, lcd_rows) {
     ROMLetterNum = KanaROMLetterNum;
     ROMLetters = KanaROMLetters;
-    setLongestWordLength(2);
+    setLongestWordLength(10);
   }
 
 protected:
