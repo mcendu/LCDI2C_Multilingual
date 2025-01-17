@@ -15,7 +15,7 @@
   https://github.com/locple/LCDI2C_Multilingual
 */
 
-#include <LCDI2C_Multilingual.h>
+#include <LCDI2C_Multilingual_MCD.h>
 
 LCDI2C_Katakana_Vietnamese lcd1(0x27, 20, 4); // I2C address: 0x27; Display size: 20x4
 LCDI2C_Vietnamese lcd2(0x26, 16, 2);          // I2C address: 0x26; Display size: 16x2

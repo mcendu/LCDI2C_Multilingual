@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 /*
   ** DemoFrench **
   Print French text (UTF-8, NFC normalized) to
@@ -12,15 +13,17 @@
   https://github.com/locple/LCDI2C_Multilingual
 */
 
-#include <LCDI2C_Multilingual.h>      // Include the whole header file
-//#include <LCDI2C_Latin.h>           // or separate header file
+#include <LCDI2C_Multilingual_MCD.h>
 
-LCDI2C_Latin lcd(0x27, 16, 2);        // I2C address: 0x27; Display size: 16x2
+LCDI2C_Latin lcd(0x27, 16, 2); // I2C address: 0x27; Display size: 16x2
 
 void setup() {
-  lcd.init(); lcd.backlight();
-  lcd.println("La décoration du bâtiment d'un Noël français est la crèche.", 3); // wait for 3 seconds before next screen
-  delay(2000); lcd.clear();
+  lcd.init();
+  lcd.backlight();
+  lcd.println("La décoration du bâtiment d'un Noël français est la crèche.",
+              3); // wait for 3 seconds before next screen
+  delay(2000);
+  lcd.clear();
   lcd.println("Ça température =25±3°C");
 }
 

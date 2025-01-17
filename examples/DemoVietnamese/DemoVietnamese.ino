@@ -13,11 +13,9 @@
   https://github.com/locple/LCDI2C_Multilingual
 */
 
-#include <LCDI2C_Multilingual.h>      // Include the whole header file
-//#include <LCDI2C_Vietnamese.h>      // or separate header file
+#include <LCDI2C_Multilingual_MCD.h>
 
 LCDI2C_Vietnamese lcd(0x27, 16, 2);   // I2C address: 0x27; Display size: 16x2
-//LCDI2C_Generic_Vietnamese lcd(0x27, 16, 2);  // Another name of LCDI2C_Vietnamese class
 
 void setup() {
   lcd.init();

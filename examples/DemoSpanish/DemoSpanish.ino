@@ -12,7 +12,7 @@
   https://github.com/locple/LCDI2C_Multilingual
 */
 
-#include <LCDI2C_Multilingual.h>
+#include <LCDI2C_Multilingual_MCD.h>
 
 LCDI2C_Latin lcd(0x27, 16, 2);        // I2C address: 0x27; Display size: 16x2
 
