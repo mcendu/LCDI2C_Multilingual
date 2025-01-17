@@ -1,21 +1,13 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_Latin_Symbols class **
-  For printing Latin-1 (French, Spanish, ...), common symbols (° €)
-  and Greek symbols in UTF-8 (NFC normalized) to I2C LCD.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with Latin-1 character ROM:
-  - Wuxi AIP31066W2
-  - Sitronix ST7066-0B
-  - Surenoo SLC European series
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 22 2024
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for some common, modern symbols, on top of the
+ * support for Western European languages. You may consider this over using
+ * the bare LCDI2C_Latin class as it contains the Euro sign.
+ */
 
 #ifndef LCDI2C_Latin_Symbols_h
 #define LCDI2C_Latin_Symbols_h

@@ -1,24 +1,12 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_Katakana_Vietnamese class **
-  For printing Japanese Katakana & Vietnamese
-  UTF-8 strings (NFC normalized) to I2C LCD.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with Japanese character ROM (Katakana font):
-  - Hitachi HD44780UA00
-  - Wuxi AIP31066
-  - Samsung KS0066F00, KS0066F04
-  - Jewel Hill SPLC780D1, SPLC063
-  - Sitronix ST7066-0A
-  - Surenoo SLC Japanese series
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 22 2024
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for Vietnamese, on top of the support for
+ * Japanese.
+ */
 
 #ifndef LCDI2C_Katakana_Vietnamese_h
 #define LCDI2C_Katakana_Vietnamese_h

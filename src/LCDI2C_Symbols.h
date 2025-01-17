@@ -1,24 +1,13 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_Symbols class **
-  A LCDI2C_Generic subclass that adds some common symbols (° €)
-  as LCD's additional language using customized characters in CGRAM.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with regular ROM (Japanese ROM - the most popular):
-  - Hitachi HD44780UA00
-  - Wuxi AIP31066
-  - Samsung KS0066F00, KS0066F04
-  - Jewel Hill SPLC780D1, SPLC063
-  - Sitronix ST7066-0A
-  - Surenoo SLC Japanese series
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 20 2024
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for some common, modern symbols, loading them
+ * into the display's CGRAM, or the customizable portion of the font, on the
+ * fly. The basic ASCII is supported as usual.
+ */
 
 #ifndef LCDI2C_Symbols_h
 #define LCDI2C_Symbols_h

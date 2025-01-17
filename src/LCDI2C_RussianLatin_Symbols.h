@@ -1,19 +1,12 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_RussianLatin_Symbols class **
-  For printing Russian (capital only) and common symbols (° €)
-  UTF-8 strings (NFC normalized) to I2C LCD.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with RussianLatin character ROM:
-  - Hitachi HD44780UA02
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 22 2024
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for some common, modern symbols, on top of the
+ * support for Russian and other Eastern European languages.
+ */
 
 #ifndef LCDI2C_RussianLatin_Symbols_h
 #define LCDI2C_RussianLatin_Symbols_h

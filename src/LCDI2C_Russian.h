@@ -1,19 +1,15 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_Russian class **
-  For printing Russian UTF-8 strings (NFC normalized) to I2C LCD.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with Russian character ROM:
-  - Wuxi AIP31066W3
-  - Surenoo SLC Russian series
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 20 2024
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for Russian and some other Eastern European
+ * languages. Displays using the following chips are supported:
+ *
+ * - Wuxi AIP31066W3
+ * - Surenoo SLC Russian series
+ */
 
 #ifndef LCDI2C_Russian_h
 #define LCDI2C_Russian_h

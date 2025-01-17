@@ -1,27 +1,16 @@
+/* SPDX-License-Identifier: MIT */
 /*
-  ** LCDI2C_Vietnamese class **
-  A LCDI2C_Generic subclass makes Vietnamese
-  as LCD's additional language using customized characters in CGRAM.
-  Max 8 customized characters printed at once.
-
-  ** Compatible LCDs **
-  Only used for LCD chips with regular ROM (Japanese ROM - the most popular):
-  - Hitachi HD44780UA00
-  - Wuxi AIP31066
-  - Samsung KS0066F00, KS0066F04
-  - Jewel Hill SPLC780D1, SPLC063
-  - Sitronix ST7066-0A
-  - Surenoo SLC Japanese series
-
-  ** Credentials **
-  Author:  Loc P. Le <phuocloc@gmail.com>
-  Updated: April 20 2024
-
-  ** Vietnamese tones & diacritics for 5x8 Latin letters (C) 2023 Loc P. Le
-
-  ** Help **
-  https://github.com/locple/LCDI2C_Multilingual
-*/
+ * This is LCDI2C_Multilingual_MCD, a fork of LiquidCrystal I2C Multilingual
+ * by Le Phuoc Loc, which is in turn based on the old LiquidCrystal_I2C from
+ * DFRobot.
+ *
+ * This class provides support for Vietnamese. The language is supported
+ * by using the display's CGRAM: Vietnamese characters are loaded into a
+ * small portion of the display's font on the fly. As such, the language
+ * is supported for every display. There are caveats: only 8 custom
+ * characters can be loaded at once, and a fallback character in ROM will
+ * be displayed in place of the 9th unique character and every one after.
+ */
 
 #ifndef LCDI2C_Vietnamese_h
 #define LCDI2C_Vietnamese_h
