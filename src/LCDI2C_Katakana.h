@@ -22,9 +22,12 @@
 #ifndef LCDI2C_Katakana_h
 #define LCDI2C_Katakana_h
 
-#include "ROM/Katakana.h"
 #include "base/LCDI2C_Custom.h"
 #include "base/LCDI2C_UTF8.h"
+
+// List of Katakana characters, punctuations, some symbols built in the ROM
+const uint8_t KanaROMLetterNum = 87;
+extern PROGMEM const ROMCharacterType KanaROMLetters[KanaROMLetterNum];
 
 class LCDI2C_Katakana : public LCDI2C_UTF8 {
 public:

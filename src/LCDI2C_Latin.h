@@ -20,8 +20,11 @@
 #ifndef LCDI2C_Latin_h
 #define LCDI2C_Latin_h
 
-#include "ROM/Latin.h"
 #include "base/LCDI2C_UTF8.h"
+
+// List of Latin-1 letters and some symbols built in the ROM
+const uint8_t LatinROMLetterNum = 80;
+extern PROGMEM const ROMCharacterType LatinROMLetters[LatinROMLetterNum];
 
 class LCDI2C_Latin : public LCDI2C_UTF8 {
 public:

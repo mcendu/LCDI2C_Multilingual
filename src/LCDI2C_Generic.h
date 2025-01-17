@@ -23,8 +23,10 @@
 #ifndef LCDI2C_Generic_h
 #define LCDI2C_Generic_h
 
-#include "ROM/Generic.h"
 #include "base/LCDI2C_UTF8.h"
+
+const uint8_t GenericROMLetterNum = 16;
+extern PROGMEM const ROMCharacterType GenericROMLetters[GenericROMLetterNum];
 
 class LCDI2C_Generic : public LCDI2C_UTF8 {
 public:

@@ -18,8 +18,11 @@
 #ifndef LCDI2C_Russian_h
 #define LCDI2C_Russian_h
 
-#include "ROM/Russian.h"
 #include "base/LCDI2C_UTF8.h"
+
+// List of Russian letters and some symbols built in the ROM
+const uint8_t RussianROMLetterNum = 74;
+extern PROGMEM const ROMCharacterType RussianROMLetters[RussianROMLetterNum];
 
 class LCDI2C_Russian : public LCDI2C_UTF8 {
 public:

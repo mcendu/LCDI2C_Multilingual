@@ -22,7 +22,6 @@
 #include "Custom/Symbols.h"
 #include "LCDI2C_Russian.h"
 
-
 class LCDI2C_Russian_Symbols : public LCDI2C_Russian {
 public:
   LCDI2C_Russian_Symbols(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows)
